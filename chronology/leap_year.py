@@ -9,4 +9,9 @@
 
 def is_leap_year(year: int):
     """Determine if year is a leap year."""
-    return False
+    if(year % 100 == 0 and (year % 4 != 0 or year % 400 != 0)):
+        return False
+    elif(year % 4 == 0 or year % 400 == 0):
+        return True
+    else:
+        return False
